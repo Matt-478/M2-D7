@@ -53,8 +53,8 @@
           color:rgb(25, 182, 25);
         }
 
-        .row aside div:nth-child(2) ol li a {
-          color: darkred;
+        .row aside div:nth-child(2) > ol > li > a {
+          color: rgb(216, 56, 56);
         }
 
         /* Write a selector to target the second post author */
@@ -484,6 +484,7 @@
         <a href="#">Back to top</a>
       </p>
       <button onclick="addLinkToNavbar()">Add a link to the Nav</button>
+      <button onclick="removelinksElsewhere()">Remove links</button>
     </footer>
 
     <script>
@@ -504,6 +505,7 @@
       const title = document.querySelector(".jumbotron h1")
       const jumbotron = document.querySelector(".jumbotron")
 
+
     // Write a function to add a new link into the navbar
     const addLinkToNavbar = function() {
       let aNode = document.createElement("a")
@@ -521,6 +523,16 @@
     const changeJumbotronBg = function() {
       jumbotron.classList.replace("bg-dark", "bg-warning")
     }
+
+    // Write a function to remove all the links under "Elsewhere"
+    const removelinksElsewhere = function () {
+    let etags = document.querySelectorAll('aside > div:nth-of-type(3) > ol > li a')
+    for (let i of etags) {
+        i.remove()
+    }
+}
+
+
 
     window.onload = function() {
       changeMainTitleColor()
