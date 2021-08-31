@@ -483,6 +483,7 @@
       <p>
         <a href="#">Back to top</a>
       </p>
+      <button onclick="addLinkToNavbar()">Add a link to the Nav</button>
     </footer>
 
     <script>
@@ -499,6 +500,15 @@
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
+      const nav = document.querySelector("nav")
+
+    // Write a function to add a new link into the navbar
+    const addLinkToNavbar = function() {
+      let aNode = document.createElement("a")
+      aNode.innerHTML = "More"
+      aNode.classList.add("p-2", "text-muted")
+      nav.appendChild(aNode)
+    }
     </script>
   </body>
 </html>
