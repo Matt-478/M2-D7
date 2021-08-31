@@ -501,6 +501,7 @@
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
       const nav = document.querySelector("nav")
+      const title = document.querySelector(".jumbotron h1")
 
     // Write a function to add a new link into the navbar
     const addLinkToNavbar = function() {
@@ -508,6 +509,15 @@
       aNode.innerHTML = "More"
       aNode.classList.add("p-2", "text-muted")
       nav.appendChild(aNode)
+    }
+
+    // Write a function to change the color of the main title
+    const changeMainTitleColor = function() {
+      title.style.color="red"
+    }
+
+    window.onload = function() {
+      changeMainTitleColor()
     }
     </script>
   </body>
