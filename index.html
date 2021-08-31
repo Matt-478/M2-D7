@@ -502,6 +502,7 @@
     */
       const nav = document.querySelector("nav")
       const title = document.querySelector(".jumbotron h1")
+      const jumbotron = document.querySelector(".jumbotron")
 
     // Write a function to add a new link into the navbar
     const addLinkToNavbar = function() {
@@ -516,8 +517,14 @@
       title.style.color="red"
     }
 
+    // Write a function to change the background of the jumbotron
+    const changeJumbotronBg = function() {
+      jumbotron.classList.replace("bg-dark", "bg-warning")
+    }
+
     window.onload = function() {
       changeMainTitleColor()
+      changeJumbotronBg()
     }
     </script>
   </body>
